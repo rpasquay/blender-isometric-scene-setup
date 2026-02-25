@@ -1,5 +1,5 @@
 [project]
-name = "blender-isometric-scene-setup"
+name = "blender_isometric_scene_setup"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -10,3 +10,7 @@ dependencies = []
 dev = [
     "fake-bpy-module-latest>=20260220",
 ]
+
+[[tool.mypy.overrides]]
+module = "bpy"
+ignore_missing_imports = true
