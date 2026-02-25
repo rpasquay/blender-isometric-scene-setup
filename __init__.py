@@ -9,15 +9,14 @@ bl_info = {
     "category": "Generic",
 }
 
-from . import panels
-from . import properties
+from . import auto_load
+
+auto_load.init()
 
 
 def register():
-    properties.register()
-    panels.register()
+    auto_load.register()
 
 
 def unregister():
-    properties.unregister()
-    panels.unregister()
+    auto_load.unregister()
