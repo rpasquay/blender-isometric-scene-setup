@@ -1,0 +1,27 @@
+version = 1
+revision = 3
+requires-python = ">=3.10"
+
+[[package]]
+name = "blender-isometric-scene-setup"
+version = "0.1.0"
+source = { virtual = "." }
+
+[package.dev-dependencies]
+dev = [
+    { name = "fake-bpy-module-latest" },
+]
+
+[package.metadata]
+
+[package.metadata.requires-dev]
+dev = [{ name = "fake-bpy-module-latest", specifier = ">=20260220" }]
+
+[[package]]
+name = "fake-bpy-module-latest"
+version = "20260220"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/be/27/b18beae2b8c2c74a44aa34f7cef5b43d2996a17668a61c0fa7265be2991c/fake_bpy_module_latest-20260220.tar.gz", hash = "sha256:27a9a8d53a8ba9188307218a6a0e28dedc475e266fa711a7c02e8cd5c2470276", size = 967178, upload-time = "2026-02-20T06:44:13.312Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/76/ff/f0e580c3c4ac8533c0d4eb1b74b2e4c18558031a228e6169086a6279c265/fake_bpy_module_latest-20260220-py3-none-any.whl", hash = "sha256:f63648dfa67c92a91d8084b7f44a604fc98b37fc006ae9e4fd7a8f1f6981d493", size = 1107278, upload-time = "2026-02-20T06:44:10.821Z" },
+]
