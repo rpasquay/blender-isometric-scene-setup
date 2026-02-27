@@ -24,7 +24,10 @@ class ISOMETRIC_PT_scene(bpy.types.Panel):
         layout = self.layout
         properties = context.scene.isometric_scene_properties
 
-        layout.prop(properties, "ground_plane_size")
+        layout.prop(
+            properties,
+            "ground_plane_size",
+        )
         layout.prop(properties, "image_width")
         layout.prop(properties, "image_height")
 
