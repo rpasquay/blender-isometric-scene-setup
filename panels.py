@@ -19,6 +19,7 @@ class ISOMETRIC_PT_scene(bpy.types.Panel):
     bl_region_type = "UI"
     bl_category = "Isometric"
     bl_parent_id = "VIEW3D_PT_isometric"
+    bl_order = 0
 
     def draw(self, context):
         layout = self.layout
@@ -35,12 +36,13 @@ class ISOMETRIC_PT_scene(bpy.types.Panel):
 
 
 class ISOMETRIC_PT_normals(bpy.types.Panel):
-    bl_label = "Normals Material"
+    bl_label = "Normal Map"
     bl_idname = "VIEW3D_PT_isometric_normals"
     bl_space_type = "VIEW_3D"
     bl_region_type = "UI"
     bl_category = "Isometric"
     bl_parent_id = "VIEW3D_PT_isometric"
+    bl_order = 1
     bl_options = {"DEFAULT_CLOSED"}
 
     def draw(self, context):
