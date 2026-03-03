@@ -5,7 +5,7 @@ schema_version = "1.0.0"
 id = "isometric_scene_setup"
 version = "1.0.0"
 name = "Isometric Scene Setup"
-tagline = "Provides an easy way for isometric scene setup for games and rendering of 2D view space normals."
+tagline = "Isometric scene setup and 2D normal map rendering"
 maintainer = "Rafael Pasquay"
 # Supported types: "add-on", "theme"
 type = "add-on"
@@ -25,6 +25,7 @@ blender_version_min = "4.2.0"
 # License conforming to https://spdx.org/licenses/ (use "SPDX: prefix)
 # https://docs.blender.org/manual/en/dev/advanced/extensions/licenses.html
 license = [
+  "SPDX:GPL-3.0-or-later",
   "SPDX:MIT",
 ]
 # Optional: required by some licenses.
@@ -64,9 +65,18 @@ license = [
 
 # Optional: build settings.
 # https://docs.blender.org/manual/en/dev/advanced/extensions/command_line_arguments.html#command-line-args-extension-build
-# [build]
-# paths_exclude_pattern = [
-#   "__pycache__/",
-#   "/.git/",
-#   "/*.zip",
-# ]
+[build]
+paths_exclude_pattern = [
+  "__pycache__/",
+  "/.git/",
+  "/.venv/",
+  "/.vscode/",
+  "/*.zip",
+  "/screenshots/",
+  "/uv.lock",
+  "/pyproject.toml",
+  "/.python-version",
+  "/Makefile",
+  "/IMPLEMENTATION.md",
+  "/README.md",
+]

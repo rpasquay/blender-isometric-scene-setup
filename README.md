@@ -55,6 +55,22 @@ This installs `fake-bpy-module-latest` as a dev dependency, which provides type 
 
 The addon was scaffolded and is developed using the [Blender Development](https://marketplace.visualstudio.com/items?itemName=JacquesLucke.blender-development) VS Code extension by Jacques Lucke, which allows starting Blender from VS Code, live-reloading addons on save and debugging with breakpoints.
 
+### Building
+
+To build the extension as a `.zip`, run your local Blender executable from the terminal:
+
+```sh
+/path/to/blender --command extension build
+```
+
+On macOS this is typically:
+
+```sh
+/Applications/Blender.app/Contents/MacOS/Blender --command extension build
+```
+
+This produces a `.zip` file in the project root that can be installed in Blender.
+
 ## Acknowledgements
 
 Special thanks to [CG Cookie](https://cgcookie.com/) and their course "Utility" on Blender addon development. 🍪 🧡
