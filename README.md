@@ -19,17 +19,25 @@ Both functions can be found in Blender's 3D view in the sidebar (shortcut: N). L
 
 ## Functions
 
+### Scene setup
+
+This function adds a camera and a plane. You can specify the side length of the square ground plane.
+
+The camera it adds can be configured in terms of desired resolution and is positioned so that the ground plane's left, bottom and right vertices align with the image's left, bottom and right borders.
+
+![Scene setup panel](screenshots/Screenshot%202026-03-03%20at%2015.34.52.png)
+
 ### 2D Normals
 
 This function renders the scene with a material override. The material that is being used transforms the 3D normals of the object to view space and renders them out to an image.
 
 This image then can be used as a normal map for 2D sprites in Game Engines like Godot.
 
-### Scene setup
+![Normal map panel](screenshots/Screenshot%202026-03-03%20at%2015.36.48.png)
 
-This function adds a camera and a plane. You can specify the side length of the square ground plane.
+![Rendered normal map](screenshots/Screenshot%202026-03-03%20at%2015.36.08.png)
 
-The camera it adds can be configured in terms of desired resolution and is positioned so that the ground plane's left, bottom and right vertices align with the image's left, bottom and right borders.
+![Standard render for comparison](screenshots/Screenshot%202026-03-03%20at%2015.36.40.png)
 
 For implementation details on how the camera position is calculated, see [IMPLEMENTATION.md](IMPLEMENTATION.md).
 
