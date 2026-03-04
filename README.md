@@ -11,7 +11,7 @@ This addon adds two operators to Blender:
 
 ## Installation
 
-TODO
+Install from https://extensions.blender.org/approval-queue/isometric-scene-setup/
 
 ## Usage
 
