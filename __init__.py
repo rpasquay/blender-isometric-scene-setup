@@ -9,14 +9,30 @@ bl_info = {
     "category": "Generic",
 }
 
-from . import auto_load
+import bpy
 
-auto_load.init()
+from .properties import IsometricSceneProperties
+from .operators import ISOMETRIC_OT_setup_scene, ISOMETRIC_OT_render_2d_normals
+from .panels import IsometricSetupPanel, ISOMETRIC_PT_scene, ISOMETRIC_PT_normals
+from . import properties
+
+classes = (
+    IsometricSceneProperties,
+    ISOMETRIC_OT_setup_scene,
+    ISOMETRIC_OT_render_2d_normals,
+    IsometricSetupPanel,
+    ISOMETRIC_PT_scene,
+    ISOMETRIC_PT_normals,
+)
 
 
 def register():
-    auto_load.register()
+    for cls in classes:
+        bpy.utils.register_class(cls)
+    properties.register()
 
 
 def unregister():
-    auto_load.unregister()
+    properties.unregister()
+    for cls in reversed(classes):
+        bpy.utils.unregister_class(cls)
