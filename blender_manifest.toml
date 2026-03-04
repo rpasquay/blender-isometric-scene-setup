@@ -69,6 +69,8 @@ license = [
 paths_exclude_pattern = [
   "__pycache__/",
   "/.git/",
+  "/.gitignore",
+  "/.mypy_cache/",
   "/.venv/",
   "/.vscode/",
   "/*.zip",
