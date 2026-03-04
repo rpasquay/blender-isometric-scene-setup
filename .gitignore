@@ -11,3 +11,9 @@ wheels/
 
 # Build artifacts
 *.zip
+
+# VSCode settings
+.vscode
+
+# MyPy Cache
+.mypy_cache
